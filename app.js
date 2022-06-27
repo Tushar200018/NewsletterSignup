@@ -51,7 +51,9 @@ app.post("/",function(req,res){
     response.on("data",function(data){
       console.log(JSON.parse(data));
     })
+    console.log(response.statusCode);
   })
+
 
   request.write(jsonData);
   request.end();
